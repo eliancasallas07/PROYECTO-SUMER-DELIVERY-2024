@@ -1,0 +1,464 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #af7ac5, #dc7633);
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg, #b6b2b2 25%, #000000 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem; /* Cambiado a rem */
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Styles */
+.logoComidaAsia,
+.logoComidaHamburguesa,
+.logoSumerHeader {
+    width: 9rem; /* Cambiado a rem */
+    height: 9rem; /* Cambiado a rem */
+    border-radius: 10px;
+}
+
+/* Language Selector */
+.language-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Cambiado a rem */
+    margin: 2rem 0; /* Cambiado a rem */
+}
+
+.language-button {
+    background-color: #af7ac5;
+    color: #faf3f3;
+    border: none;
+    padding: 0.5rem 1rem; /* Cambiado a rem */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-button:hover {
+    background-color: #eb6ed6;
+}
+
+/* Diseño de Botonera PRINCIPAL */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Colocar los botones en columna */
+    align-items: center;    /* Alinear los botones al centro */
+    text-align: center;
+}
+
+.navbar li {
+    margin-bottom: 0.625rem; /* Espacio entre los botones (10px a rem) */
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 0.625rem 1.25rem; /* (10px a rem) y (20px a rem) */
+    text-align: center;
+    border-radius: 3.125rem; /* (50px a rem) */
+    font-size: 1rem; /* (16px a rem) */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 12.5rem; /* (200px a rem) */
+}
+
+.nav-button i {
+    margin-right: 0.5rem; /* Espacio entre el icono y el texto (8px a rem) */
+}
+
+.nav-button:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el cursor */
+}
+/* finalización de botonera */
+
+/* Main estilo*/
+.Principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    min-height: calc(100vh - 12.5rem); /* Ajusta según sea necesario */
+    padding: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.navbarMain {
+    background-color: #333;
+    padding: 0.625rem; /* 10px */
+    display: flex;
+    justify-content: center; /* Centra los elementos en la barra de navegación */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    margin: 0 auto;
+}
+
+/* Botonera dentro del main */
+
+.navbarMain ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Elimina márgenes que podrían afectar la alineación */
+    display: flex;
+    flex-direction: column; /* Alinear en columna */
+    align-items: center; /* Centrar los botones horizontalmente */
+    width: 100%; /* Asegura que el ul ocupe todo el ancho del navbar */
+    max-width: 400px; /* Limita el ancho máximo del ul */
+}
+
+.navbarMain ul li {
+    margin: 0.625rem 0; /* Espaciado vertical entre botones */
+    width: 100%; /* Asegura que cada elemento ocupe todo el ancho del ul */
+    max-width: 100%; /* Asegura que no sobrepase el contenedor */
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(63, 179, 63);
+    color: white;
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Asegura que los botones ocupen todo el ancho del li */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.nav-button:hover {
+    background-color: darkgreen;
+}
+
+.nav-button i {
+    margin-right: 0.5rem; /* 8px */
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 48rem) { /* 768px */
+    main {
+        padding: 0.625rem; /* 10px */
+    }
+
+    .nav-button {
+        font-size: 0.875rem; /* 14px */
+        padding: 0.5rem 1rem; /* 8px 16px */
+    }
+}
+
+/* Estilo para el contenedor del interruptor */
+.switch-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 auto; 
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.75rem; /* 60px a rem (1rem = 16px) */
+    height: 2.125rem; /* 34px a rem */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4CAF50; 
+    transition: .4s;
+    border-radius: 2.125rem; /* 34px a rem */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.625rem; /* 26px a rem */
+    width: 1.625rem; /* 26px a rem */
+    border-radius: 50%; /* Para mantener la forma circular */
+    left: 0.25rem; /* 4px a rem */
+    bottom: 0.25rem; /* 4px a rem */
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #f44336; 
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.625rem); /* 26px a rem */
+}
+
+.switch-label {
+    margin-left: 0.625rem; /* 10px a rem */
+    font-size: 0.875rem; /* 14px a rem */
+}
+
+/* Finalización de estilo para el contenedor del interruptor */
+
+/* Main Styles */
+.Principal {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem; /* Cambiado a rem */
+}
+
+aside {
+    width: 12rem; /* Cambiado a rem */
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 700px; /* Aumenta el ancho máximo */
+    margin: 0 auto; 
+    padding: 1.25rem; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    width: 90%; /* Cambia a un porcentaje para mayor flexibilidad */
+}
+
+/* Estilos de la cuadrícula */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 1.25rem; /* Espacio entre los elementos de la cuadrícula */
+}
+
+/* Estilos para etiquetas e inputs */
+.grid-item {
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+label {
+    font-weight: bold; /* Negrita para las etiquetas */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Ancho completo */
+    padding: 0.625rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #4CAF50; /* Cambia el borde al enfoque */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Estilo para el botón */
+.nav-button {
+    grid-column: span 2; /* Ocupa ambas columnas */
+    background-color: #4CAF50; /* Color del botón */
+    color: white; /* Texto blanco */
+    padding: 0.625rem; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.nav-button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+}
+/* Estilo para checkbox al estar seleccionado */
+.options {
+    display: flex;
+    flex-direction: column; /* Alinear etiquetas verticalmente */
+    padding: 1rem; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde alrededor del fieldset */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+    margin: 1.25rem 0; /* Espaciado vertical entre secciones */
+}
+
+.options label {
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto y el checkbox */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-bottom: 0.625rem; /* Espacio entre opciones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la opción */
+}
+
+.options input[type="checkbox"] {
+    margin-right: 0.625rem; /* Espacio entre checkbox y texto */
+    width: 1.25rem; /* Tamaño del checkbox */
+    height: 1.25rem; /* Tamaño del checkbox */
+    accent-color: #4CAF50; /* Color del checkbox (en navegadores compatibles) */
+}
+
+
+.options input[type="checkbox"]:checked {
+    background-color: #4CAF50; /* Color de fondo cuando está seleccionado */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0; /* Cambiado a rem */
+    position: relative;
+    z-index: 10;
+}
+
+/* Footer Secciones */
+.quienes-somos, .redes-sociales, .contacto, .ubicacion {
+    margin-bottom: 1.875rem; /* 30px */
+}
+
+.quienes-somos h2, .redes-sociales h2, .contacto h2, .ubicacion h2 {
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 0.9375rem; /* 15px */
+}
+
+.quienes-somos p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5;
+    max-width: 50rem; /* 800px */
+    margin: 0 auto;
+}
+
+.redes-sociales .icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem; /* 20px */
+    margin-top: 0.625rem; /* 10px */
+}
+
+.icono-red-social {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    transition: transform 0.3s ease;
+}
+
+.icono-red-social:hover {
+    transform: scale(1.2);
+}
+
+.contacto a {
+    color: #af7ac5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto a:hover {
+    text-decoration: underline;
+}
+
+.ubicacion iframe {
+    max-width: 100%;
+    border: none;
+    margin-top: 0.9375rem; /* 15px */
+}
+
+.footer-legal {
+    margin-top: 1.25rem; /* 20px */
+    font-size: 0.875rem; /* 14px */
+    color: #000000;
+}
+
+.footer-legal a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .Principal {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    header, footer {
+        padding: 1rem; /* Cambiado a rem */
+    }
+
+    /* Ajustes específicos para el footer en pantallas pequeñas */
+    footer {
+        padding: 1rem 0; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .quienes-somos, .redes-sociales, .contacto, .ubicacion {
+        margin-bottom: 1rem; /* Reduce margen */
+    }
+
+    .quienes-somos h2, .redes-sociales h2, .contacto h2, .ubicacion h2 {
+        font-size: 1.25rem; /* Ajusta tamaño de fuente */
+        margin-bottom: 0.75rem; /* Reduce margen */
+    }
+
+    .quienes-somos p {
+        max-width: 100%; /* Permite que el texto ocupe todo el ancho */
+    }
+
+    .redes-sociales .icons {
+        gap: 1rem; /* Ajusta el espacio entre iconos */
+    }
+
+    .icono-red-social {
+        width: 2rem; /* Reduce tamaño de iconos */
+        height: 2rem;
+    }
+
+    .contacto a {
+        font-size: 0.875rem; /* Ajusta tamaño de fuente */
+    }
+
+    .footer-legal {
+        font-size: 0.75rem; /* Reduce tamaño de fuente */
+        margin-top: 1rem; /* Reduce margen */
+    }
+}

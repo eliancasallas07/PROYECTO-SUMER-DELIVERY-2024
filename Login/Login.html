@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Enlace a la fuente de Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <!-- Enlace a la fuente de animacion-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css">
+    <link rel="icon" type="image/x-icon" href="../img/Favicon.png">
+    <script src="Login.js"></script> 
+</head>
+
+
+<body>
+
+    <header class="Encabezamiento">
+        
+        <h1 class="EnunciadoLogin">
+              Login Sumer Delivery
+        </h1>
+
+
+
+        <div class="header-images">
+            <img src="../img/logoComidaAsia.png" alt="Logo Comida Asia" class="logoComidaAsia">
+            <img src="../img/Logotipo.png" alt="Logo Sumer" class="logoSumerHeader">
+            <img src="../img/LogoComidaHamburguesa.png" alt="Logo Comida Hamburguesa" class="logoComidaHamburguesa">
+        </div>
+        
+        <div class="language-selector">
+            <img src="ruta/a/icono-globo.png" alt="Idioma" class="language-icon">
+            <button class="language-button">Español</button>
+            <button class="language-button">English</button>
+        </div>
+
+        
+
+    </header>
+    
+    <main class="Principal">
+        <section class="login-Formulario">
+            <h1>Iniciar sesión</h1>
+    
+            <form onsubmit="return logeo(event)">
+                <!-- Agrupamos inputs en fieldset y utilizamos article y label semánticos -->
+                <fieldset>
+                    <article class="NombreUsuario">
+                        <label for="Usuario">Nombre de usuario</label>
+                        <input type="text" required id="Usuario" name="Usuario">
+                    </article>
+    
+                    <article class="Contraseña">
+                        <label for="Clave">Contraseña</label>
+                        <input type="password" required id="Clave" name="Clave">
+                    </article>
+    
+                    <article class="Rol">
+                        <label for="TipoUsuario">Rol</label>
+                        <select id="TipoUsuario" name="TipoUsuario" required>
+                            <option value="">Seleccione un Rol</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Comprador">Comprador</option>
+                            <option value="Vendedor">Vendedor</option>
+                            <option value="Repartidor">Repartidor</option>
+                        </select>
+                    </article>
+                </fieldset>
+    
+                <!-- Otras secciones no necesarias en div -->
+                <p class="RecordarContraseña">
+                    ¿Olvidó su contraseña? <a href="https://wa.me/+573107947035">Continuar</a>
+                </p>
+    
+                <button type="submit" class="btn-iniciar">Iniciar</button>
+
+                <p class="Registrarse">
+                    Quiero hacer el <a href="https://wa.me/+573107947035">Registro</a>
+                </p>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="Piedepagina">
+        <section class="quienes-somos">
+            <h2>¿Quiénes somos?</h2>
+            <p>App dedicada al delivery en la ciudad de Tunja, Boyacá, Colombia. Servicios de delivery para almacenes de cadena, droguerías y tiendas de otros tipos.</p>
+        </section>
+    
+        <section class="redes-sociales">
+            <h2>Síguenos en redes sociales:</h2>
+            <div class="icons">
+                <a href="https://www.instagram.com/tu_perfil" target="_blank">
+                    <img src="../img/instagram.png" alt="Instagram" class="icono-red-social">
+                </a>
+                <a href="https://www.tiktok.com/@tu_perfil" target="_blank">
+                    <img src="../img/tiktok.png" alt="TikTok" class="icono-red-social">
+                </a>
+                <a href="https://www.facebook.com/tu_perfil" target="_blank">
+                    <img src="../img/facebook.png" alt="Facebook" class="icono-red-social">
+                </a>
+                <a href="https://x.com/tu_perfil" target="_blank">
+                    <img src="../img/x.png" alt="X (Twitter)" class="icono-red-social">
+                </a>
+                <a href="https://www.youtube.com/tu_perfil" target="_blank">
+                    <img src="../img/youtube.png" alt="YouTube" class="icono-red-social">
+                </a>
+            </div>
+        </section>
+    
+        <section class="contacto">
+            <h2>¿Tienes dudas?</h2>
+            <p>Número de contacto: <a href="tel:+573107947035">+57 310 794 7035</a></p>
+            <p>Correo electrónico: <a href="mailto:tu_correo@example.com">elian.casallas07@gmail.com</a></p>
+        </section>
+    
+        <section class="ubicacion">
+            <h2>Nuestra ubicación</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4880430456014!2d-73.36732388472744!3d5.540074435087039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a027a226d021d%3A0x5317de1c8e73d92f!2sTunja%2C%20Boyac%C3%A1!5e0!3m2!1ses!2sco!4v1694700123456!5m2!1ses!2sco"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <section class="footer-legal">
+            <p>&copy; 2024 Sumer Delivery</p>
+            <p><a href="privacidad.html">Privacy Policy</a></p>
+        </section>
+    </footer>
+
+    <script src="login.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+    
+    
+</body>
+</html>
